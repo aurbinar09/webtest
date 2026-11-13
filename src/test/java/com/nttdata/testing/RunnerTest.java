@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.nttdata.testing",
-        tags = "@HappyPath")
+        tags = "@AgregarProducto")
 public class RunnerTest {
 }

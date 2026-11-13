@@ -1,5 +1,6 @@
 package com.nttdata.testing.Tasks;
 
+import com.nttdata.testing.Pages.ProductPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
@@ -36,7 +37,7 @@ public class AgregarProductoAlCarrito implements Task {
 
         actor.attemptsTo(
                 Click.on(PRODUCT.of(producto)),
-                Click.on(ADD_TO_CART_BUTTON)
+                Click.on(PRODUCT)
         );
         //notificación
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -59,7 +60,7 @@ public class AgregarProductoAlCarrito implements Task {
         );
         // 5 segundos para ver notificación
         try {
-            Thread.sleep(5000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
